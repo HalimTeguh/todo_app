@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TodoTile extends StatelessWidget {
-  const TodoTile({
-    super.key, required this.title, required this.isChecked, required this.onchange
-  });
+  const TodoTile(
+      {super.key,
+      required this.title,
+      required this.isChecked,
+      required this.onchange});
 
   final String title;
   final bool isChecked;
@@ -20,14 +22,20 @@ class TodoTile extends StatelessWidget {
             color: Colors.lightBlueAccent,
             borderRadius: BorderRadius.circular(10)),
         child: ListTile(
-          leading: 
-              Checkbox(value: isChecked, onChanged: onchange),
+          leading: Checkbox(
+            activeColor: Colors.white,
+            checkColor: Colors.lightBlueAccent,
+            side: const BorderSide(color: Colors.white),
+            value: isChecked,
+            onChanged: onchange,
+          ),
           title: Row(
             children: [
               Text(
                 title,
                 style: GoogleFonts.poppins(
                   color: Colors.white,
+                  decoration: (isChecked == true) ? TextDecoration.lineThrough : TextDecoration.none
                 ),
               ),
             ],
