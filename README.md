@@ -1,6 +1,17 @@
 # todo_app
 
-A new Flutter project.
+This Project To do List is an exercise in creating basic projects using Flutter.
+This project uses several packages, including:
+
+- GoogleFont
+- FlutterSlidable
+- Hive (local database)
+
+
+## Preview Project
+![image](/assets/Screenshot_1.png)
+![image](/assets/Screenshot_2.png)
+![image](/assets/Screenshot_3.png)
 
 ## Getting Started
 
